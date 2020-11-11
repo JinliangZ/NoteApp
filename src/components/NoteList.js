@@ -15,7 +15,7 @@ const NoteList = () => {
             </ul>
         </div>
      ):(
-        <div className="empty">YOU ALL DONE EVERYTHING! GOOD JOB!</div>
+        <h6 className="empty">YOU HAVE DONE EVERYTHING! GOOD JOB!</h6>
      )
 }
  

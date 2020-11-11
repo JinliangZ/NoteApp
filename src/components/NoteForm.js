@@ -2,25 +2,27 @@ import React, {useContext, useState } from 'react'
 import { NoteContext } from '../contexts/NoteContext';
 
 const NewNoteForm = () => {
-    const {addNote} = useContext(NoteContext);
+    const {dispatch} = useContext(NoteContext);
     const [title, setTitle] = useState('');
-    const [author, setAuthor] = useState('');
+    const [day, setDay] = useState('');
     const handleSubmit =(e)=>{
         e.preventDefault();
-        addNote(title,author);
+        dispatch({type:'ADD_NOTE', note:{
+            title, day
+        }});
         setTitle('');
-        setAuthor('');
+        setDay('');
     }
     return ( 
         <form onSubmit={handleSubmit}>
-            <label htmlFor="note">Put Note in Here: </label>
-            <input type="text" required placeholder="note" value={title} onChange={(e)=>{
+            <label htmlFor="note">Write Down Note in Here: </label>
+            <input type="text" required placeholder="NOTE" value={title} onChange={(e)=>{
                 setTitle(e.target.value)
             }} />
-            <input type="text" required placeholder="author" value={author} onChange={(e)=>{
-                setAuthor(e.target.value)
+            <input type="text" required placeholder="DAY" value={day} onChange={(e)=>{
+                setDay(e.target.value)
             }} />
-            <input type="submit" name="note" id="note" value ="add note" />
+            <input className="btn btn-outline-dark" type="submit" name="note" id="note" value ="ADD NOTE" />
         </form>
      );
 }

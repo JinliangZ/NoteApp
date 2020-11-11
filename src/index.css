@@ -18,12 +18,12 @@ body {
 
 .navbar{
   padding: 10px 20px;
-  text-align: center;
+  text-align: center; 
   background: #6d3d6d;
 }
 
 .navbar h1{
-  margin: 10px 0;
+  width: 100%;;
 }
 
 .note-list{
@@ -45,11 +45,11 @@ body {
   font-weight: bold;
   color: #fff;
   font-size: 1.5em;
+  margin-right: 40px;
 }
-.note-list .author{
+.note-list .day{
   font-size: 1.2em;
   color: #ddd;
-  
 }
 .empty{
   margin: 20px;
@@ -57,6 +57,26 @@ body {
 }
 
 button{
-  margin-left: 450px;
+  margin-left: 80%;
   padding:5px;
+}
+
+form{
+  padding: 20px;
+}
+input[type='text']{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 6px 0;
+  background: #3c1f3c;
+  color: #fff;
+  border: 0;
+}
+input[type='submit']{
+  margin: 10px auto;
+  background: #eee;
+  border: 0;
+  padding: 6px 20px;
+  display: block;
 }
