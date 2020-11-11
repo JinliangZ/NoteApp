@@ -27,7 +27,7 @@ body {
 }
 
 .note-list{
-  margin: 20px;
+  margin: 5px ;
 }
 .note-list ul{
   padding: 0;
@@ -57,7 +57,7 @@ body {
 }
 
 button{
-  margin-left: 80%;
+  margin-left: 70%;
   padding:5px;
 }
 
